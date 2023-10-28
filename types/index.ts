@@ -1,5 +1,9 @@
 import { MouseEventHandler } from "react";
 
+export interface HomeProps {
+  searchParams: FilterProps;
+}
+
 export interface PrimaryButtonProps {
   title: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
@@ -37,7 +41,7 @@ export interface CarDetailsProps {
 
 export interface FilterProps {
   manufacturer?: string;
-  year?: number;
+  year: number;
   fuel?: string;
   limit?: number;
   model?: string;
@@ -51,4 +55,9 @@ export interface OptionProps {
 export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
+}
+
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext: boolean;
 }
