@@ -53,7 +53,7 @@ export default function SearchBar() {
       window.location.pathname
     }?${searchParams.toString()}`;
 
-    router.push(newPathName);
+    router.push(newPathName, { scroll: false });
   };
 
   return (
