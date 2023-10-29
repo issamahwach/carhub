@@ -23,7 +23,7 @@ function Hero() {
         </p>
         <PrimaryButton
           btnType="button"
-          title="Explore Cards"
+          title="Explore Cars"
           handleClick={handleScroll}
         />
       </div>

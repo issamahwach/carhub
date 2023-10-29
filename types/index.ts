@@ -1,7 +1,7 @@
 import { MouseEventHandler } from "react";
 
 export interface HomeProps {
-  searchParams: FilterProps;
+  searchParams?: FilterProps;
 }
 
 export interface PrimaryButtonProps {
@@ -41,7 +41,7 @@ export interface CarDetailsProps {
 
 export interface FilterProps {
   manufacturer?: string;
-  year: number;
+  year?: number;
   fuel?: string;
   limit?: number;
   model?: string;

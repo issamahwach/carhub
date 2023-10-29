@@ -5,11 +5,11 @@ import { fuels, yearsOfProduction } from "@/constants";
 import { HomeProps } from "../../types";
 export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars({
-    manufacturer: searchParams.manufacturer || "toyota",
-    year: searchParams.year || 2022,
-    fuel: searchParams.fuel || "",
-    limit: searchParams.limit || 10,
-    model: searchParams.model || "",
+    manufacturer: searchParams?.manufacturer || "toyota",
+    year: searchParams?.year || 2022,
+    fuel: searchParams?.fuel || "",
+    limit: searchParams?.limit || 10,
+    model: searchParams?.model || "",
   });
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
@@ -18,7 +18,7 @@ export default async function Home({ searchParams }: HomeProps) {
     <main className="pt-32">
       <Hero />
 
-      <div id="discover" className="px-2 xl:px-28 my-24">
+      <div id="discover" data-testid="discover" className="px-2 xl:px-28 my-24">
         <div>
           <h2 className="text-2xl font-bold">Car Catalogue</h2>
           <p>Explore the cars you might like</p>
@@ -40,8 +40,8 @@ export default async function Home({ searchParams }: HomeProps) {
               ))}
             </div>
             <ShowMore
-              pageNumber={(searchParams.limit || 10) / 10}
-              isNext={(searchParams.limit || 10) > allCars.length}
+              pageNumber={(searchParams?.limit || 10) / 10}
+              isNext={(searchParams?.limit || 10) > allCars.length}
             />
           </section>
         ) : (
