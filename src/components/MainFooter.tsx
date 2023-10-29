@@ -1,5 +1,4 @@
 import React from "react";
-import { footerLinks } from "@/constants";
 import Image from "next/image";
 
 export default function MainFooter() {

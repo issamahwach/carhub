@@ -18,7 +18,7 @@ export default async function Home({ searchParams }: HomeProps) {
     <main className="pt-32">
       <Hero />
 
-      <div className="px-2 xl:px-28 my-24">
+      <div id="discover" className="px-2 xl:px-28 my-24">
         <div>
           <h2 className="text-2xl font-bold">Car Catalogue</h2>
           <p>Explore the cars you might like</p>

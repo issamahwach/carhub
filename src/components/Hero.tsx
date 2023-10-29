@@ -4,7 +4,13 @@ import { PrimaryButton } from ".";
 import Image from "next/image";
 
 function Hero() {
-  const handleScroll = () => {};
+  const handleScroll = () => {
+    const nextSection = document.getElementById("discover");
+
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className="flex flex-col xl:flex-row items-center mx-auto px-2 xl:px-28 gap-8 xl:gap-0">
       <div className="w-full xl:w-1/2">
