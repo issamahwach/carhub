@@ -43,6 +43,7 @@ const SearchManufacturer = ({
             displayValue={(item: string) => item}
             onChange={(event) => setQuery(event.target.value)} // Update the search query when the input changes
             placeholder="Volkswagen..."
+            data-test-id="input1"
           />
 
           {/* Transition for displaying the options */}
@@ -74,6 +75,7 @@ const SearchManufacturer = ({
                       }`
                     }
                     value={item}
+                    data-test-id={`test-search-${item}`}
                   >
                     {({ selected, active }) => (
                       <>

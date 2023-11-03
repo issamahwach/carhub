@@ -18,13 +18,16 @@ export default async function Home({ searchParams }: HomeProps) {
     <main className="pt-32">
       <Hero />
 
-      <div id="discover" data-testid="discover" className="px-2 xl:px-28 my-24">
+      <div id="discover" className="px-2 xl:px-28 my-24">
         <div>
           <h2 className="text-2xl font-bold">Car Catalogue</h2>
           <p>Explore the cars you might like</p>
         </div>
 
-        <div className="flex flex-col xl:flex-row items-start lg:items-end justify-between my-4">
+        <div
+          className="flex flex-col xl:flex-row items-start lg:items-end justify-between my-4"
+          data-test-id="discover"
+        >
           <SearchBar />
           <div className="flex flex-row mt-4 gap-4">
             <CustomFilter title="fuel" options={fuels} />

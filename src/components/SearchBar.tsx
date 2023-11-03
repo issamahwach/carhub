@@ -7,7 +7,11 @@ import { useRouter } from "next/navigation";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => {
   return (
-    <button type="submit" className={`${otherClasses}`}>
+    <button
+      type="submit"
+      className={`${otherClasses}`}
+      data-test-id="search-button"
+    >
       <Image
         src="/magnifying-glass.svg"
         alt="search"
@@ -63,7 +67,7 @@ export default function SearchBar() {
           manufacturer={manufacturer}
           setManufacturer={setManufacturer}
         />
-        <SearchButton otherClasses="sm:hidden flex-shrink-0" />
+        {/* <SearchButton otherClasses="sm:hidden flex-shrink-0" /> */}
       </div>
       <div className="mt-4 flex flex-row">
         <div className="border-gray-300 border-2 rounded-lg relative shadow-sm">
@@ -83,7 +87,7 @@ export default function SearchBar() {
             className="w-full border-0 rounded-lg px-10"
           />
         </div>
-        <SearchButton otherClasses="sm:hidden flex-shrink-0" />
+        <SearchButton otherClasses="flex-shrink-0" />
       </div>
     </form>
   );

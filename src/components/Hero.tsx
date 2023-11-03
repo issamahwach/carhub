@@ -14,7 +14,7 @@ function Hero() {
   return (
     <div className="flex flex-col xl:flex-row items-center mx-auto px-2 xl:px-28 gap-8 xl:gap-0">
       <div className="w-full xl:w-1/2">
-        <h1 className="text-3xl xl:text-5xl font-bold">
+        <h1 className="text-3xl xl:text-5xl font-bold" data-test-id="headline">
           Find, book, or rent a car - quickly and easily!
         </h1>
         <p className="mt-4 text-xl">
